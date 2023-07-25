@@ -1,2 +1,2 @@
-#Tipos de Kernel
-#User vs Kernel Mode
+# Tipos de Kernel
+# User vs Kernel Mode
