@@ -1,13 +1,14 @@
 # Tipos de Kernel
 ## Comunes
-1. ### Kernel monolítico
-1. ### Microkernel
-1. ### Kernel híbrido
+### Kernel monolítico
+  Es de gran tamaño que puede gestionar todas las tareas. Se encarga de la gestión de memoria y procesos, así como de la comunicación entre los procesos y el soporte de las diferentes funciones de los drivers y el hardware. Los sistemas operativos que recurren al Kernel monolítico son Linux, OS X y Windows.
+### Microkernel
+### Kernel híbrido
 
 ## Poco comunes
-2. ### Nanokernel
-2. ### Exokernel
-2. ### Unikernel
-2. ### Anykernel
+### Nanokernel
+### Exokernel
+### Unikernel
+### Anykernel
 
 # User vs Kernel Mode
