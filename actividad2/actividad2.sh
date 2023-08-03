@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#Comprobar si existe el programa que sirve para obtener un JSON (jp)
+#Comprobar si existe el programa que sirve para obtener un JSON (jq)
 jq --version
 if test $? -eq 1; then sudo apt-get update sudo apt-get install jq; fi
 
