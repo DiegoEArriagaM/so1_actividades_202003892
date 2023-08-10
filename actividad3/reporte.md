@@ -138,3 +138,56 @@ drwxrwxr-x 2 usuario1 usuario1 4096 ago  9 18:21 <font color="#12488B"><b>direct
 <font color="#26A269"><b>usuario1@diego-HP-Laptop-14-dq1xxx</b></font>:<font color="#12488B"><b>~</b></font>$ ls -ld
 drwxr-x--- 3 usuario1 usuario1 4096 ago  9 18:20 <font color="#12488B"><b>.</b></font>
 <font color="#26A269"><b>usuario1@diego-HP-Laptop-14-dq1xxx</b></font>:<font color="#12488B"><b>~</b></font>$ </pre>
+
+## Modificar Permisos usando `chmod` con Modo Numérico:
+<pre><font color="#26A269"><b>usuario1@diego-HP-Laptop-14-dq1xxx</b></font>:<font color="#12488B"><b>~</b></font>$ chmod 640 archivo1.txt
+<font color="#26A269"><b>usuario1@diego-HP-Laptop-14-dq1xxx</b></font>:<font color="#12488B"><b>~</b></font>$ ls -l
+total 8
+-rw-r----- 1 usuario1 usuario1   19 ago  9 18:20 archivo1.txt
+drwxrwxr-x 2 usuario1 usuario1 4096 ago  9 18:21 <font color="#12488B"><b>directorio1</b></font>
+<font color="#26A269"><b>usuario1@diego-HP-Laptop-14-dq1xxx</b></font>:<font color="#12488B"><b>~</b></font>$ </pre>
+
+## Modificar Permisos usando `chmod` con Modo Simbólico
+<pre><font color="#26A269"><b>usuario1@diego-HP-Laptop-14-dq1xxx</b></font>:<font color="#12488B"><b>~/directorio1</b></font>$ chmod u+rwx archivo2.txt
+<font color="#26A269"><b>usuario1@diego-HP-Laptop-14-dq1xxx</b></font>:<font color="#12488B"><b>~/directorio1</b></font>$ ls -l
+total 4
+-rwxrw-r-- 1 usuario1 usuario1 21 ago  9 18:21 <font color="#26A269"><b>archivo2.txt</b></font>
+<font color="#26A269"><b>usuario1@diego-HP-Laptop-14-dq1xxx</b></font>:<font color="#12488B"><b>~/directorio1</b></font>$ </pre>
+
+## Cambiar el Grupo Propietario
+<pre><font color="#26A269"><b>usuario1@diego-HP-Laptop-14-dq1xxx</b></font>:<font color="#12488B"><b>~/directorio1</b></font>$ chown usuario1:grupo1 archivo2.txt
+<font color="#26A269"><b>usuario1@diego-HP-Laptop-14-dq1xxx</b></font>:<font color="#12488B"><b>~/directorio1</b></font>$ ls -l
+total 4
+-rwxrw-r-- 1 usuario1 grupo1 21 ago  9 18:21 <font color="#26A269"><b>archivo2.txt</b></font>
+<font color="#26A269"><b>usuario1@diego-HP-Laptop-14-dq1xxx</b></font>:<font color="#12488B"><b>~/directorio1</b></font>$ 
+
+</pre>
+
+## Configurar Permisos de Directorio
+<pre><font color="#26A269"><b>usuario1@diego-HP-Laptop-14-dq1xxx</b></font>:<font color="#12488B"><b>~</b></font>$ chmod 740 directorio1
+<font color="#26A269"><b>usuario1@diego-HP-Laptop-14-dq1xxx</b></font>:<font color="#12488B"><b>~</b></font>$ ls -l
+total 8
+-rw-r----- 1 usuario1 usuario1   19 ago  9 18:20 archivo1.txt
+drwxr----- 2 usuario1 usuario1 4096 ago  9 18:21 <font color="#12488B"><b>directorio1</b></font>
+<font color="#26A269"><b>usuario1@diego-HP-Laptop-14-dq1xxx</b></font>:<font color="#12488B"><b>~</b></font>$ 
+</pre>
+
+## Comprobación de Acceso
+<pre><font color="#26A269"><b>usuario1@diego-HP-Laptop-14-dq1xxx</b></font>:<font color="#12488B"><b>~</b></font>$ su usuario2
+Contraseña: 
+<font color="#26A269"><b>usuario2@diego-HP-Laptop-14-dq1xxx</b></font>:<font color="#12488B"><b>/home/usuario1</b></font>$ cat archivo1.txt
+cat: archivo1.txt: Permiso denegado
+<font color="#26A269"><b>usuario2@diego-HP-Laptop-14-dq1xxx</b></font>:<font color="#12488B"><b>/home/usuario1</b></font>$ cat directorio1/archivo2.txt
+cat: directorio1/archivo2.txt: Permiso denegado
+<font color="#26A269"><b>usuario2@diego-HP-Laptop-14-dq1xxx</b></font>:<font color="#12488B"><b>/home/usuario1</b></font>$ 
+</pre>
+
+## Verificación Final
+<pre><font color="#26A269"><b>usuario2@diego-HP-Laptop-14-dq1xxx</b></font>:<font color="#12488B"><b>/home/usuario1</b></font>$ ls -l
+ls: no se puede abrir el directorio &apos;.&apos;: Permiso denegado
+<font color="#26A269"><b>usuario2@diego-HP-Laptop-14-dq1xxx</b></font>:<font color="#12488B"><b>/home/usuario1</b></font>$ ls -ld
+ls: no se puede acceder a &apos;.&apos;: Permiso denegado
+<font color="#26A269"><b>usuario2@diego-HP-Laptop-14-dq1xxx</b></font>:<font color="#12488B"><b>/home/usuario1</b></font>$ 
+</pre>
+
+# Reflexion Final
