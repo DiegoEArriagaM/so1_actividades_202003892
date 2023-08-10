@@ -191,3 +191,13 @@ ls: no se puede acceder a &apos;.&apos;: Permiso denegado
 </pre>
 
 # Reflexion Final
+
+**¿Por qué es importante gestionar correctamente los usuarios y permisos en un sistema operativo?**
+
+    Es importante sobre todo en ambientes empresariales, en los cuales diferentes usuarios tienen acceso a los mismos equipos, ya que de esta forma se evita que usuarios no autorizados realicen cambios en componentes claves de todo el sistema, poniendo el riesgo el funcionamiento de este
+
+**¿Qué otros comandos o técnicas conocen para gestionar permisos en Linux?**
+
+    Otra forma de realizar cambios en los permisos de los archivos es mediante la interfaz gráfica que ofrecen los distintos sistemas operativos derivados de Linux.
+
+    Tambien se pueden realizar cambios directamente en los archivos de texto que almacenan toda la información sobre los usuarios, pero hay que tener cuidado con que los cambios sean cuerrentes con todos los archivos.
