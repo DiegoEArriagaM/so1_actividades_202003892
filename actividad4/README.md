@@ -19,7 +19,7 @@ actividad.sh  <font color="#2AA1B3"><b>corepack</b></font>  <font color="#26A269
 [sudo] contraseña para diego: 
 </pre>
 
-- Y se escribio en el lo siguiente
+- Y se escribio en este lo siguiente
 <pre><span style="background-color:#FFFFFF"><font color="#300A24">  GNU nano 6.2                                                  actividad4.service *                                                          </font></span>
 <font color="#26A269"><b>[Unit]</b></font>
 Description=Mi servicio super-útil
